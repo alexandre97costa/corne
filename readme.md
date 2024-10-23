@@ -13,7 +13,8 @@ Para passar o layout para o corne, precisamos de transformar o layout para .uf2.
 
 Para isso precisamos de passar o `layout.json` para um `keymap.c`, e depois compilar para `.uf2`.
 
-O primeiro passo pode ser usado com o comando `qmk json2c {keymap}`
+O primeiro passo pode ser usado com o comando `qmk json2c {keymap}`. Esta maneira nunca funciona, então podemos usar esta ferramenta com o mesmo propósito -> https://jhelvy.shinyapps.io/qmkjsonconverter/
+
 O segundo passo é o comando `make` normal, com a adenda de que o ficheiro `rules.mk` precisa de ter descrita a flag `CONVERT_TO=promicro_rp20400`. Esta flag é o que faz o processo de compilação gerar um ficheiro `.uf2`.
 
 Depois disso, basta fazer reset às duas metades. Elas irão definir-se como um disco/pen, onde podemos arrastar o ficheiro que fizemos. Tem que se arrastar o mesmo ficheiro para as duas metades, mas convem fazer uma de cada vez.
